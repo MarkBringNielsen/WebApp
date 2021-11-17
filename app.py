@@ -10,11 +10,7 @@ def index():
     if request.method == 'POST':
         relay.toggle()
 
-    return render_template('index.html')
-
-@app.route('/cake', methods=['POST'])
-def cake():
-    return render_template('cake.html')
+    return relay.is_lit()
 
 
 
