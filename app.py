@@ -10,7 +10,7 @@ def index():
     if request.method == 'POST':
         relay.toggle()
 
-    return relay.value == 0
+    return str(relay.value == 0)
 
 
 
